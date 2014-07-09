@@ -1,0 +1,102 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* general */
+html, body, nav, main, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+body{
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+a:link {
+    color: #000;
+		text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+h1, h2{
+	text-align: center;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+h1{
+	font-size: 65px;
+  color: black;
+}
+
+::-moz-selection { background: #27ae60; color: #fff; text-shadow: none; }
+::selection { background: #27ae60; color: #fff; text-shadow: none; }
+
+/* sidebar */
+section.sidebar{
+	position: fixed;
+	height: 100%;
+  background: #fff;
+  top: 0;
+	left: 0;
+  width: 250px;
+  height: 100%;
+  overflow: auto;
+}
+
+section.sidebar > ul{
+	list-style: none;
+}
+
+section.sidebar > ul > li{
+	padding: 35px;
+}
+
+section.sidebar > ul > li > a{
+	padding: 10px;
+	font-size: 17px;
+	font-weight: lighter;
+}
+
+section.sidebar > ul > li > a:hover{
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+	
+	background: #ecf0f1;
+	color: #2ecc71;
+  box-shadow: 0 0 5px #2ecc71;	
+}
+
+/* main page */
+section.page{
+  background: #fff;
+  position: absolute;
+	padding: 30px;
+	height: 100%;
+  top: 0;
+  right: 0;
+  left: 250px;
+  overflow: auto;
+  border-left: 1px solid rgb(229,229,229);
+}
+
+section.page > h2 > a:hover{
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+	color: #2ecc71;
+  text-shadow: 0 0 1px #2ecc71;	
+}
+
+#main-content{
+	font-weight: lighter;
+}
