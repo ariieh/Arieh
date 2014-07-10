@@ -12,7 +12,15 @@ html, body, nav, main, h1, p, ul, li {
 
 body{
 	font-family: sans-serif;
-	overflow: hidden;
+}
+
+p{
+	margin-bottom: 15px;
+}
+
+.highlight{
+	background: yellow;
+	padding: 5px;
 }
 
 a:link {
@@ -35,13 +43,19 @@ h1{
   color: black;
 }
 
+img{
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	cursor: -webkit-zoom-in;
+}
+
 ::-moz-selection { background: #27ae60; color: #fff; text-shadow: none; }
 ::selection { background: #27ae60; color: #fff; text-shadow: none; }
 
 /* sidebar */
 section.sidebar{
 	position: fixed;
-	height: 100%;
   background: #fff;
   top: 0;
 	left: 0;
@@ -52,6 +66,8 @@ section.sidebar{
 
 section.sidebar > ul{
 	list-style: none;
+	position: absolute;
+	top: 5%;
 }
 
 section.sidebar > ul > li{
@@ -65,11 +81,6 @@ section.sidebar > ul > li > a{
 }
 
 section.sidebar > ul > li > a:hover{
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-	
 	background: #ecf0f1;
 	color: #2ecc71;
   box-shadow: 0 0 5px #2ecc71;	
@@ -78,13 +89,11 @@ section.sidebar > ul > li > a:hover{
 /* main page */
 section.page{
   background: #fff;
-  position: absolute;
 	padding: 30px;
-	height: 100%;
+	height: auto;
   top: 0;
-  right: 0;
-  left: 250px;
-  overflow: auto;
+  margin-left: 281px;
+	overflow: auto;
   border-left: 1px solid rgb(229,229,229);
 }
 
@@ -95,6 +104,16 @@ section.page > h2 > a:hover{
   -o-transition: all 0.15s ease-in-out;
 	color: #2ecc71;
   text-shadow: 0 0 1px #2ecc71;	
+}
+
+#main-content ul{
+	list-style: cjk-ideographic;
+	list-style-position:inside;
+	margin: 20px;
+}
+
+#main-content ul > li{
+	padding: 5px;
 }
 
 #main-content{

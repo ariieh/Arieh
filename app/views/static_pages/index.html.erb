@@ -4,57 +4,138 @@
 	<li><a href="#topaz">Topaz</a></li>
 	<li><a href="#asteroids">Asteroids</a></li>
 	<li><a href="#findr">Findr</a></li>
-	<li><a href="#trello">Trello</a></li>
+	<li><a href="#trellino">Trellino</a></li>
 	<li><a href="#checkers">Checkers</a></li>
 	<li><a href="#chess">Chess</a></li>
 </ul>
 <% end %>
 
 <h1>Arieh Smith</h1>
-<h2><a href="mailto:arieh.smith@gmail.com">Email</a> | +1-516-318-3233 | <a href="https://github.com/ariieh">GitHub</a></h2>
+<h2><a href="mailto:arieh.smith@gmail.com">Email</a> | +1-516-318-3233 | <a href="https://github.com/ariieh">GitHub</a> | <a href="http://www.linkedin.com/in/ariehsmith">LinkedIn</a></h2>
 
 <div id="main-content">
 	<div id="bio">
 		<h3>Bio</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<p>Hi, my name's Ari. I <span class="highlight"><em>make cool software</em></span> and I'm <span class="highlight"><strong>available for hire</strong></highlight>.</p>
+		<p>I'm passionate about <span class="highlight">good design</span>, I'm down with <span class="highlight">Rails</span>, and I love <span class="highlight">Javascript</span>.</p>
+		<p>Check out what I've done after the jump.</p>
 	</div>
 
 	<div id="topaz">
 		<h3>Topaz</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<%= image_tag("topaz.png", id: "topaz-image", width: "800", height: "456") %>
+		<ul>
+		<li>A Backbone.js-based clone of the popular business news site <a href="http://qz.com/">Quartz</a> with Medium-style blogging features</li>
+		<li>Implements site-wide Kaminari-based infinite scroll drawing from Active Record and custom SQL queries</li>
+		<li>Utilizes custom-built Markdown-based text editor with live HTML text and image preview</li>
+		<li>Live searches and highlights full article text with prioritized PgSearch query</li>
+		</ul>
 	</div>
 
 	<div id="asteroids">
 		<h3>Asteroids</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<%= image_tag("asteroids.png", id: "asteroids-image", width: "600", height: "332") %>
+		<ul>
+		<li>Smoothly renders animated images and background in full-screen browser view</li>
+		<li>Binds keys with Keymaster.js to implement arctangent-based ship rotation and constant-speed bullet firing</li>
+		</ul>
 	</div>
 
 	<div id="findr">
 		<h3>Findr</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<%= image_tag("findr.png", id: "findr-image", width: "483", height: "343") %>
+		<ul>
+		<li>Queries NYC Open Data on Bootstrap-built site to find free WiFi locations in NYC closest to given address</li>
+		<li>Caches Google Geocoding and Distance Matrix API results in database</li>
+		</ul>
 	</div>
 
-	<div id="trello">
-		<h3>Trello</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<div id="trellino">
+		<h3>Trellino</h3>
+		<%= image_tag("trellino.png", id: "trellino-image", width: "442", height: "345") %>
+		<ul>
+			<li>A (very!) light Backbone clone of the organizer app <a href="https://trello.com/">Trello</a>.</li>
+			<li>Utilizes Javascript Masonry grid library to maintain fluid grid layout.</li>
+		</ul>
 	</div>
 
 	<div id="checkers">
 		<h3>Checkers</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<%= image_tag("checkers.png", id: "checkers-image", width: "675", height: "300") %>
+		<ul>
+			<li>Graphical console-based checkers implementation</li>
+			<li>Integrates with custom-built AI for one-level deep board search</li>
+		</ul>
 	</div>
 
 	<div id="chess">
 		<h3>Chess</h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<%= image_tag("chess.png", id: "chess-image", width: "534", height: "224") %>
+		<ul>
+			<li>Graphical console-based chess implementation</li>
+			<li>Integrates with open-source chess engine <a href="http://stockfishchess.org/">Stockfish</a> binaries</li>
+		</ul>
 	</div>
 </div>
 
 <script>
 $(document).ready(function(){
+
+	window.widthValues = {
+		"topaz": $("#topaz-image").width(),
+		"asteroids": $("#asteroids-image").width(),
+		"findr": $("#findr-image").width(),
+		"trellino": $("#trellino-image").width(),
+		"checkers": $("#checkers-image").width(),
+		"chess": $("#chess-image").width()
+	}
+
+	window.heightValues = {
+		"topaz": $("#topaz-image").height(),
+		"asteroids": $("#asteroids-image").height(),
+		"findr": $("#findr-image").height(),
+		"trellino": $("#trellino-image").height(),
+		"checkers": $("#checkers-image").height(),
+		"chess": $("#chess-image").height()
+	}
+	
 	$('section.sidebar a').on("click",function(event){
 		event.preventDefault();
-		$('section.page').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200});
-	})
+		$('body').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200});
+	});
+	
+	
+	$('img').hover(function(event){
+	    var fullImage = new Image();
+	    fullImage.src = $(event.currentTarget).attr("src");
+
+		$("<img src='"+ fullImage.src +"'></img>").load(function(){
+			if ($(this)[0].width > $(event.currentTarget).width()){
+				$(event.currentTarget).css("cursor","-webkit-zoom-in");
+			} else {
+				$(event.currentTarget).css("cursor","-webkit-zoom-out");
+			}
+		});
+		
+	    return false;
+	});
+	
+	$('img').click(function(event){
+	    var fullImage = new Image();
+	    fullImage.src = $(event.currentTarget).attr("src");
+		var imageName = $(event.currentTarget).attr("id").split("-")[0];
+
+		$("<img src='"+ fullImage.src +"'></img>").load(function(){
+			if ($(this)[0].width > $(event.currentTarget).width()){
+				$(event.currentTarget).animate({width: $(this)[0].width, height: $(this)[0].height});
+				$(event.currentTarget).css("cursor","-webkit-zoom-out");
+			} else {
+				$(event.currentTarget).animate({width: window.widthValues[imageName], height: window.heightValues[imageName]});
+				$(event.currentTarget).css("cursor","-webkit-zoom-in");
+			}
+		});
+		
+	    return false;
+	});
 });
 </script>
