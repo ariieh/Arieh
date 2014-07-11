@@ -111,6 +111,12 @@ $(document).ready(function(){
 		$('body').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200});
 	});
 	
+	$('nav a').on("click",function(event){
+		event.preventDefault();
+		$('body').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200, offset: -75});
+		$(this).css({"color": "#27ae60"});
+		$(this).parent().siblings().children().css({"color":"black"});
+	});
 	
 	$('img').hover(function(event){
 	    var fullImage = new Image();

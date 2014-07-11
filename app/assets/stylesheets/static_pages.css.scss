@@ -150,3 +150,41 @@ section.page > h2 > a:hover{
 	vertical-align: middle;
 	margin-right: 4px;
 }
+
+nav > ul.menu-bar{
+	display: none;
+	background: #ecf0f1;
+	float: right;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+	list-style: none;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+nav > ul > li{
+	padding: 5px;
+	float: left;
+	font-weight: lighter;
+	text-align: center;
+}
+
+/* mobile */
+@media (max-width: 400px) {
+	section.sidebar{
+		display: none;
+	}
+	
+	section.page{
+		margin-top: 45px;
+	  margin-left: 0px;
+		border: 0px;
+	}
+	
+	nav > ul.menu-bar{
+		display: block;
+	}
+}
