@@ -27,9 +27,10 @@
 		<%= image_tag("topaz.png", id: "topaz-image", width: "800", height: "456") %>
 		<p>See suggested demo steps <a href="https://github.com/ariieh/Topaz">here</a>. Be sure to sign in (as demo user) first!</p> 
 		<ul>
-		<li>A Rails and Backbone.js-based clone of the popular business news site <a href="http://qz.com/">Quartz</a> with Medium-style blogging features</li>
-		<li>Implements site-wide Kaminari-based infinite scroll drawing from Active Record and custom SQL queries</li>
-		<li>Utilizes custom-built Markdown-based text editor with live HTML text and image preview</li>
+		<li>Rails and Backbone.js-based clone of the popular business news site <a href="http://qz.com/">Quartz</a> with Medium-style blogging features</li>
+		<li>Implements site-wide infinite scroll built on top of Kaminari and firing custom SQL queries</li>
+		<li>Utilizes custom-built Markdown-based text editor with live HTML text and image preview; allows for
+automated text selection and instantaneous AJAX uploading and rendering</li>
 		<li>Live searches and highlights full article text with prioritized PgSearch query</li>
 		</ul>
 	</div>
@@ -49,7 +50,7 @@
 		<h4>Ruby on Rails & Bootstrap, May 2014</h4>
 		<%= image_tag("findr.png", id: "findr-image", width: "483", height: "343") %>
 		<ul>
-		<li>Queries NYC Open Data on Rails and Bootstrap-built site to find free WiFi locations in NYC closest to given address</li>
+		<li>Queries NYC Open Data to find free WiFi locations in NYC closest to given address</li>
 		<li>Caches Google Geocoding and Distance Matrix API results in database</li>
 		</ul>
 	</div>
