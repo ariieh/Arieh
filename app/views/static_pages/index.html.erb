@@ -1,6 +1,6 @@
 <% content_for :sidebar do %>
 <ul>
-	<li><a href="#bio">Bio</a></li>
+	<li><a href="#bio" class="active">Bio</a></li>
 	<li><a href="#topaz">Topaz</a></li>
 	<li><a href="#asteroids">Asteroids</a></li>
 	<li><a href="#findr">Findr</a></li>
@@ -110,16 +110,40 @@ $(document).ready(function(){
 		"chess": $("#chess-image").height()
 	}
 	
+	window.divHeights = {
+		"bio": $("#bio").offset().top,
+		"topaz": $("#topaz").offset().top,
+		"asteroids": $("#asteroids").offset().top,
+		"findr": $("#findr").offset().top,
+		"trellino": $("#trellino").offset().top,
+		"checkers": $("#checkers").offset().top,
+		"chess": $("#chess").offset().top
+	}
+	
 	$('section.sidebar a').on("click",function(event){
 		event.preventDefault();
 		$('body').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200});
 	});
 	
+	$(window).on("scroll", function(event){
+		var el = "bio"
+		Object.keys(window.divHeights).forEach(function(key){
+			if (Math.abs(window.divHeights[key] - $(window).scrollTop()) < Math.abs(window.divHeights[el] - $(window).scrollTop())){
+				el = key;
+			}
+		});
+		$("a").removeClass("active");
+		
+		if ($(window).scrollTop() < ($(document).height() - $(window).height())){
+			$("a[href=#" + el + "]").addClass("active");
+		} else {
+			$("a[href=#chess]").addClass("active");
+		}
+	});
+	
 	$('nav a').on("click",function(event){
 		event.preventDefault();
 		$('body').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200, offset: -75});
-		$(this).css({"color": "#27ae60"});
-		$(this).parent().siblings().children().css({"color":"black"});
 	});
 	
 	$('img').hover(function(event){

@@ -92,10 +92,14 @@ section.sidebar > ul > li > a{
 	font-weight: lighter;
 }
 
-section.sidebar > ul > li > a:hover{
+section.sidebar > ul > li > a:hover, section.sidebar > ul > li > a.active{
 	background: #ecf0f1;
 	color: #2ecc71;
   box-shadow: 0 0 5px #2ecc71;	
+}
+
+nav a.active{
+	color: #27ae60;
 }
 
 /* main page */
