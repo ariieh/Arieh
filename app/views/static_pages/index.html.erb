@@ -91,7 +91,6 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 
 <script>
 $(document).ready(function(){
-
 	window.widthValues = {
 		"topaz": $("#topaz-image").width(),
 		"asteroids": $("#asteroids-image").width(),
@@ -161,6 +160,7 @@ $(document).ready(function(){
 	    return false;
 	});
 	
+	if(!/iPhone|iPod|iPad|Android|BlackBerry/.test(navigator.userAgent) ) {
 	$('img').click(function(event){
 	    var fullImage = new Image();
 	    fullImage.src = $(event.currentTarget).attr("src");
@@ -178,5 +178,6 @@ $(document).ready(function(){
 		
 	    return false;
 	});
+	}
 });
 </script>

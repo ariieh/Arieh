@@ -188,6 +188,12 @@ nav > ul > li{
 		border: 0px;
 	}
 	
+	section.page img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+	}
+	
 	nav > ul.menu-bar{
 		display: block;
 	}
