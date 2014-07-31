@@ -3,6 +3,7 @@
 	<li><a href="#bio" class="active">Bio</a></li>
 	<li><a href="#topaz">Topaz</a></li>
 	<li><a href="#asteroids">Asteroids</a></li>
+	<li><a href="#flappybird">Flappy Bird</a></li>
 	<li><a href="#findr">Findr</a></li>
 	<li><a href="#trellino">Trellino</a></li>
 	<li><a href="#checkers">Checkers</a></li>
@@ -45,6 +46,18 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 		<li>Smoothly renders animated images and background with HTML5 canvas and Javascript in full-screen browser view</li>
 		<li>Binds keys with Keymaster.js to implement arctangent-based ship rotation and constant-speed bullet firing</li>
 		<li>Fends off enemies with flaming footballs</li>
+		</ul>
+	</div>
+
+	<div id="flappybird">
+		<h3>Flappy Bird <span class="header-link"><a href="http://arieh-flappy-bird.herokuapp.com">link</a></span><span class="header-link"><a href="https://github.com/ariieh/FlappyBird">github</a></span></h3>
+		<h4>HTML5 canvas & Javascript, July 2014</h4>
+		<%= image_tag("flappybird.png", id: "flappybird-image", width: "600", height: "416") %>
+		<p>Control bird with arrow keys.</p> 
+		<ul>
+		<li>Side-scrolling, tropical-themed Flappy Bird clone with custom gravity</li>
+		<li>Game difficulty increases with game length</li>
+		<li>Maintains scores in PostgreSQL database</li>
 		</ul>
 	</div>
 
@@ -94,6 +107,7 @@ $(document).ready(function(){
 	window.widthValues = {
 		"topaz": $("#topaz-image").width(),
 		"asteroids": $("#asteroids-image").width(),
+		"flappybird": $("#flappybird-image").width(),
 		"findr": $("#findr-image").width(),
 		"trellino": $("#trellino-image").width(),
 		"checkers": $("#checkers-image").width(),
@@ -103,6 +117,7 @@ $(document).ready(function(){
 	window.heightValues = {
 		"topaz": $("#topaz-image").height(),
 		"asteroids": $("#asteroids-image").height(),
+		"flappybird": $("#flappybird-image").height(),
 		"findr": $("#findr-image").height(),
 		"trellino": $("#trellino-image").height(),
 		"checkers": $("#checkers-image").height(),
@@ -113,6 +128,7 @@ $(document).ready(function(){
 		"bio": $("#bio").offset().top,
 		"topaz": $("#topaz").offset().top,
 		"asteroids": $("#asteroids").offset().top,
+		"flappybird": $("#flappybird-image").offset().top,
 		"findr": $("#findr").offset().top,
 		"trellino": $("#trellino").offset().top,
 		"checkers": $("#checkers").offset().top,
