@@ -103,7 +103,7 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 </div>
 
 <script>
-$(document).ready(function(){
+$(window).load(function(){
 	window.widthValues = {
 		"topaz": $("#topaz-image").width(),
 		"asteroids": $("#asteroids-image").width(),
@@ -124,6 +124,8 @@ $(document).ready(function(){
 		"chess": $("#chess-image").height()
 	}
 	
+	console.log(window.heightValues);
+	
 	window.divHeights = {
 		"bio": $("#bio").offset().top,
 		"topaz": $("#topaz").offset().top,
@@ -141,7 +143,8 @@ $(document).ready(function(){
 	});
 	
 	$(window).on("scroll", function(event){
-		var el = "bio"
+		this.el = ("bio" || this.el);
+		var el = this.el;
 		Object.keys(window.divHeights).forEach(function(key){
 			if (Math.abs(window.divHeights[key] - $(window).scrollTop()) < Math.abs(window.divHeights[el] - $(window).scrollTop())){
 				el = key;
