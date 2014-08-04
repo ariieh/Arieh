@@ -198,3 +198,21 @@ nav > ul > li{
 		display: block;
 	}
 }
+
+@media(max-height: 760px){
+	section.sidebar > ul > li{
+		padding: 30px;
+	}
+}
+
+@media(max-height: 675px){
+	section.sidebar > ul > li{
+		padding: 25px;
+	}
+}
+
+@media(max-height: 590px){
+	section.sidebar > ul > li{
+		padding: 20px;
+	}
+}
