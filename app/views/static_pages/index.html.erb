@@ -19,7 +19,7 @@
 <div id="main-content">
 	<div id="bio">
 		<h3>Bio</h3>
-		<p>Hi, my name's Ari. I <span class="highlight">make cool software</span> in New York City. I work at this sweet startup called <a href="https://www.plated.com/">Plated</a>. I used to do the <a href="https://www.google.com/search?q=excel+bottles+and+water+bottles">models and bottles</a> life at a hedge fund. Oh, and I speak <a href="https://www.youtube.com/watch?v=0P4vB346GfM">pretty good Chinese</a>, too.</p>
+		<p>Hi, my name's Ari. I <span class="highlight">make cool software</span> in New York City. I work at this sweet startup called <a href="https://www.plated.com/">Plated</a>. I used to do the <a href="https://www.google.com/search?q=excel+models+and+coca+cola+bottles">models and bottles</a> life at a hedge fund. Oh, and I speak <a href="https://www.youtube.com/watch?v=0P4vB346GfM">pretty good Chinese</a>, too.</p>
 		<p>I'm passionate about <span class="highlight">good design</span>, I'm down with <span class="highlight">Rails</span>, and I love <span class="highlight">Javascript</span>.</p>
 		<p>Check out some of what I've done after the jump. Click the images to enlarge.</p>
 	</div>
@@ -125,9 +125,7 @@ $(window).load(function(){
 		"checkers": $("#checkers-image").height(),
 		"chess": $("#chess-image").height()
 	}
-	
-	console.log(window.heightValues);
-	
+		
 	window.divHeights = {
 		"bio": $("#bio").offset().top,
 		"topaz": $("#topaz").offset().top,
@@ -188,8 +186,10 @@ $(window).load(function(){
 		var imageName = $(event.currentTarget).attr("id").split("-")[0];
 
 		$("<img src='"+ fullImage.src +"'></img>").load(function(){
-			if ($(this)[0].width > $(event.currentTarget).width()){
-				$(event.currentTarget).animate({width: $(this)[0].width, height: $(this)[0].height});
+			if ($(event.currentTarget).width() <= window.widthValues[imageName]){
+				var newWidth = $("div#main-content").width();
+				var newHeight = newWidth * $(this)[0].height / $(this)[0].width;
+				$(event.currentTarget).animate({width: newWidth, height: newHeight});
 				$(event.currentTarget).css("cursor","-webkit-zoom-out");
 			} else {
 				$(event.currentTarget).animate({width: window.widthValues[imageName], height: window.heightValues[imageName]});
