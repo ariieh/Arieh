@@ -137,17 +137,18 @@ $(window).load(function(){
 		"chess": $("#chess").offset().top
 	}
 	
-	function resize(){
+	function resizeImages(){
 		Object.keys(window.widthValues).forEach(function(key){
 			if (window.widthValues[key] > $("div#main-content").width()){
 				var newWidth = $("div#main-content").width();
 				var newHeight = newWidth * window.heightValues[key] / window.widthValues[key];
-				$("#" + key + "-image").animate({width: newWidth, height: newHeight});
+				$("#" + key + "-image").animate({width: newWidth, height: newHeight}, "fast");
 			}
 		});
 	}
 	
-	$(window).resize(resize);
+	resizeImages();
+	$(window).resize(resizeImages);
 	
 	$('section.sidebar a').on("click",function(event){
 		event.preventDefault();
