@@ -11,6 +11,8 @@
 </ul>
 <% end %>
 
+<a href="http://wearemadeinny.com/"><img id="made-in-ny" src="images/madeinny.png"></a>
+
 <h1>Arieh Smith</h1>
 <h2><a href="mailto:arieh.smith@gmail.com">Email</a> | +1-516-318-3233 | <a href="https://github.com/ariieh">GitHub</a> | <a href="http://www.linkedin.com/in/ariehsmith">LinkedIn</a></h2>
 
@@ -164,7 +166,7 @@ $(window).load(function(){
 		$('body').scrollTo($(event.currentTarget).attr("href").toString(), {duration:200, offset: -75});
 	});
 	
-	$('img').hover(function(event){
+	$('#main-content img').hover(function(event){
 	    var fullImage = new Image();
 	    fullImage.src = $(event.currentTarget).attr("src");
 
@@ -180,7 +182,7 @@ $(window).load(function(){
 	});
 	
 	if(!/iPhone|iPod|iPad|Android|BlackBerry/.test(navigator.userAgent) ) {
-	$('img').click(function(event){
+	$('#main-content img').click(function(event){
 	    var fullImage = new Image();
 	    fullImage.src = $(event.currentTarget).attr("src");
 		var imageName = $(event.currentTarget).attr("id").split("-")[0];
