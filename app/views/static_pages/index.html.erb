@@ -142,7 +142,7 @@ $(window).load(function(){
 			if (window.widthValues[key] > $("div#main-content").width()){
 				var newWidth = $("div#main-content").width();
 				var newHeight = newWidth * window.heightValues[key] / window.widthValues[key];
-				$("#" + key + "-image").animate({width: newWidth, height: newHeight}, "fast");
+				$("#" + key + "-image").stop().animate({width: newWidth, height: newHeight}, "fast");
 			}
 		});
 	}
