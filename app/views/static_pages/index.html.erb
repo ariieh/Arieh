@@ -1,6 +1,7 @@
 <% content_for :sidebar do %>
 <ul>
 	<li><a href="#bio" class="active">Bio</a></li>
+	<li><a href="#localy">Localy</a></li>
 	<li><a href="#topaz">Topaz</a></li>
 	<li><a href="#asteroids">Asteroids</a></li>
 	<li><a href="#flappybird">Flappy Bird</a></li>
@@ -20,8 +21,21 @@
 	<div id="bio">
 		<h3>Bio</h3>
 		<p>Hi, my name's Ari. I <span class="highlight">make cool software</span> in New York City. I work at this sweet startup called <a href="https://www.plated.com/">Plated</a>. I used to do the <a href="https://www.google.com/search?q=excel+models+and+coca+cola+bottles">models and bottles</a> life at a hedge fund. Oh, and I speak <a href="https://www.youtube.com/watch?v=0P4vB346GfM">pretty good Chinese</a>, too.</p>
-		<p>I'm passionate about <span class="highlight">good design</span>, I'm down with <span class="highlight">Rails</span>, and I love <span class="highlight">Javascript</span>.</p>
+		<p>I'm passionate about <span class="highlight">good design</span>, I'm down with <span class="highlight">Rails</span>, and I love <span class="highlight">JavaScript</span>, especially when running on <a href="http://nodejs.org/">Node</a> and <a href="http://backbonejs.org/">Backbone</a>.</p>
 		<p>Check out some of what I've done after the jump. Click the images to enlarge.</p>
+	</div>
+
+	<div id="localy">
+		<h3>Localy <span class="header-link"><a href="https://bitbucket.org/ariehsmith/localy/">bitbucket</a></span></h3>
+		<h4>Node.js & Backbone.js, October 2014</h4>
+		<%= image_tag("localy.png", id: "localy-image", width: "657", height: "572") %>
+		<ul>
+		<li>Node.js map-based chat app</li>
+		<li>Runs server on Node, Express, and Socket.io to implement multi-room group local, neighborhood, and remote chat</li>
+		<li>Uses HTML5 geolocation to place users on a <a href="https://www.mapbox.com/">Mapbox</a> and <a href="http://leafletjs.com/">Leaflet</a>-built map</li>
+		<li>Hooks into PostgreSQL database with SQL query builder <a href="http://knexjs.org/">Knex.js</a> and ORM <a href="http://bookshelfjs.org/">Bookshelf.js</a></li>
+		<li>Backbone-built event management system allows modular, black-box design</li>
+		</ul>
 	</div>
 
 	<div id="topaz">
@@ -41,11 +55,11 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 
 	<div id="asteroids">
 		<h3>Asteroids <span class="header-link"><a href="http://arieh-asteroids.herokuapp.com">link</a></span><span class="header-link"><a href="https://github.com/ariieh/Asteroids">github</a></span></h3>
-		<h4>HTML5 canvas & Javascript, June 2014</h4>
+		<h4>HTML5 canvas & JavaScript, June 2014</h4>
 		<%= image_tag("asteroids.png", id: "asteroids-image", width: "600", height: "332") %>
 		<p>Control ship with arrow keys and fire with spacebar.</p> 
 		<ul>
-		<li>Smoothly renders animated images and background with HTML5 canvas and Javascript in full-screen browser view</li>
+		<li>Smoothly renders animated images and background with HTML5 canvas and JavaScript in full-screen browser view</li>
 		<li>Binds keys with Keymaster.js to implement arctangent-based ship rotation and constant-speed bullet firing</li>
 		<li>Fends off enemies with flaming footballs</li>
 		</ul>
@@ -53,7 +67,7 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 
 	<div id="flappybird">
 		<h3>Flappy Bird <span class="header-link"><a href="http://arieh-flappybird.herokuapp.com">link</a></span><span class="header-link"><a href="https://github.com/ariieh/FlappyBird">github</a></span></h3>
-		<h4>HTML5 canvas & Javascript, July 2014</h4>
+		<h4>HTML5 canvas & JavaScript, July 2014</h4>
 		<%= image_tag("flappybird.png", id: "flappybird-image", width: "600", height: "416") %>
 		<p>Control bird with arrow keys.</p> 
 		<ul>
@@ -79,7 +93,7 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 		<%= image_tag("trellino.png", id: "trellino-image", width: "442", height: "345") %>
 		<ul>
 			<li>A (very!) light Rails/Backbone clone of the organizer app <a href="https://trello.com/">Trello</a></li>
-			<li>Utilizes Javascript Masonry grid library to maintain fluid grid layout (try horizontally resizing the page!)</li>
+			<li>Utilizes JavaScript Masonry grid library to maintain fluid grid layout (try horizontally resizing the page!)</li>
 		</ul>
 	</div>
 
@@ -107,6 +121,7 @@ automated text selection and instantaneous AJAX uploading and rendering</li>
 <script>
 $(window).load(function(){
 	window.widthValues = {
+		"localy": $("#localy-image").width(),
 		"topaz": $("#topaz-image").width(),
 		"asteroids": $("#asteroids-image").width(),
 		"flappybird": $("#flappybird-image").width(),
@@ -117,6 +132,7 @@ $(window).load(function(){
 	}
 
 	window.heightValues = {
+		"localy": $("#localy-image").height(),
 		"topaz": $("#topaz-image").height(),
 		"asteroids": $("#asteroids-image").height(),
 		"flappybird": $("#flappybird-image").height(),
@@ -128,6 +144,7 @@ $(window).load(function(){
 		
 	window.divHeights = {
 		"bio": $("#bio").offset().top,
+		"localy": $("#localy").offset().top,
 		"topaz": $("#topaz").offset().top,
 		"asteroids": $("#asteroids").offset().top,
 		"flappybird": $("#flappybird-image").offset().top,
